@@ -1,0 +1,174 @@
+// #MIXINS
+.rgtCol{
+  width: 208px;
+  height: 300px;
+  margin-left: 35px;
+  background: #f4f1e9;
+  padding: 12px;
+  h5{
+    margin-top: 12px;
+  }
+  a{
+    display: inline;
+  }
+}
+
+.blackTxt{
+  font-size: 12px;
+  font-family: 'Muli', "Myriad Web Pro", arial, serif;
+  font-weight: normal;
+}
+
+.ss-font-proxima-nova{
+  font-family: @ss-font-proxima-nova;
+}
+
+.ss-font-proxima-nova-semibold{
+  font-weight: 600;
+}
+
+.ss-font-muli{
+  font-family: @ss-font-muli;
+}
+
+.ss-color-grade-early-learning{
+  color: @ss-color-grade-early-learning;
+}
+
+.ss-color-grade-kindergarten{
+  color: @ss-color-grade-kindergarten;
+}
+
+.ss-color-grade-1{
+  color: @ss-color-grade-1;
+}
+
+.ss-color-grade-2{
+  color: @ss-color-grade-2;
+}
+
+.ss-color-grade-3{
+  color: @ss-color-grade-3;
+}
+
+.ss-color-grade-4{
+  color: @ss-color-grade-4;
+}
+
+.ss-color-grade-5{
+  color: @ss-color-grade-5;
+}
+
+.ss-color-grade-6{
+  color: @ss-color-grade-6;
+}
+
+.ss-color-grade-7{
+  color: @ss-color-grade-7;
+}
+
+.ss-color-grade-8{
+  color: @ss-color-grade-8;
+}
+
+// #PADDING/MARGIN
+
+.ss-padding-matrix(@pad) {
+    padding: @pad !important;
+    &-all { padding: @pad !important; }
+    &-h {
+        padding-left: @pad !important;
+        padding-right: @pad !important;
+    }
+    &-v {
+        padding-top: @pad !important;
+        padding-bottom: @pad !important;
+    }
+    &-left { padding-left: @pad !important; }
+    &-right { padding-right: @pad !important; }
+    &-top { padding-top: @pad !important; }
+    &-bottom { padding-bottom: @pad !important; }
+}
+
+.ss-margin-matrix(@mar) {
+    margin: @mar !important;
+    &-all { margin: @mar !important; }
+    &-h {
+        margin-left: @mar !important;
+        margin-right: @mar !important;
+    }
+    &-v {
+        margin-top: @mar !important;
+        margin-bottom: @mar !important;
+    }
+    &-left { margin-left: @mar !important; }
+    &-right { margin-right: @mar !important; }
+    &-top { margin-top: @mar !important; }
+    &-bottom { margin-bottom: @mar !important; }
+}
+
+// #BUTTONS
+
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+    padding: @padding-vertical @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+    border-radius: @border-radius;
+}
+
+.ss-color-block(@color: @ss-color-tan; @width: 0.25em) {
+    &.ss-color-block {
+        padding-left: (@width * 2);
+        &:before {
+            content: '\00a0';
+            width: @width;
+            height: 100%;
+            margin-right: 0.25em;
+            display: block;
+            float: left;
+            position: absolute;
+            left: 0;
+            background: @color;
+        }
+        &-background {
+            padding: @ss-padding-vertical-base @ss-padding-horizontal-base;
+            background: @color;
+        }
+    }
+}
+
+.ss-button-colors() {
+    &.white { background-color: #fff; border-color: #fff; }
+    &.red   {
+        background-color: @ss-color-red;
+        border-color: @ss-color-red;
+        &:hover {
+            background-color: lighten(@ss-color-red, 12%);
+            border-color: lighten(@ss-color-red, 12%);
+        }
+    }
+    &.green   {
+        background-color: @ss-color-green;
+        border-color: @ss-color-green;
+        &:hover {
+            background-color: lighten(@ss-color-green, 12%);
+            border-color: lighten(@ss-color-green, 12%);
+        }
+    }
+    &.blue   {
+        background-color: @ss-color-blue;
+        border-color: @ss-color-blue;
+        &:hover {
+            background-color: lighten(@ss-color-blue, 12%);
+            border-color: lighten(@ss-color-blue, 12%);
+        }
+    }
+}
+
+.ss-background-colors() {
+    &.white { background-color: #fff; }
+    &.red   { background-color: @ss-color-red; }
+    &.green { background-color: @ss-color-green; }
+    &.blue { background-color: @ss-color-blue; }
+    &.tan { background-color:  @ss-color-tan; }
+}

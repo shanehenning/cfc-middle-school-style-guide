@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>SecondSTEP Style Guide v6.0</title>
+<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/ss-v6.css" rel="stylesheet">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="https://use.typekit.net/qvb3odk.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row top-bar">
+        <div class="col-sm-12">
+            <div class="row">
+                <img class="col-sm-12 col-md-3" src="imgs/ssp-logo-sel-bpu-cpu.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div id="left-side" class="col-sm-12 col-md-3">
+            <ul class="ss-nav-list">
+                <li><h1 class="ss-margin-vertical-none-top"><div class="ss-icon"><img src="imgs/cube.png" width="20px" /></div>Styles</h1></li>
+                <li>
+                    <a href="index.html">
+                        Introduction
+                    </a>
+                </li>
+                <li>
+                    <a class="current" href="positioning.html">
+                        Grid/Positioning
+                        <small>grid, margins, padding</small>
+                    </a>
+                </li>
+                <li>
+                  <a href="logos.html">
+                              Logos
+                              <small><em>Second Step</em></small>
+                          </a>
+                </li>
+                <li>
+                    <a href="colors.html">
+                        Colors
+                        <small>grade-level, program, unit</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="typography.html">
+                        Typography
+                        <small>headings, paragraphs</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="buttons.html">
+                        Buttons/Links
+                        <small>single, group, animated</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascrip:void();">
+                        Forms
+                        <small>inputs, help text</small>
+                    </a>
+                </li>
+            </ul>
+            <ul class="ss-nav-list">
+                <li><h1><div class="ss-icon"><img src="imgs/page.png" /></div>Samples</h1></li>
+                <li>
+                    <a href="sample-pages/landing-page.html">
+                        Lorem Page
+                    </a>
+                </li>
+                <li>
+                    <a href="sample-pages/tan-sidebar.html">
+                        Tan Sidebar
+                    </a>
+                </li>
+                <li>
+                    <a href="javascrip:void();">
+                        Contact Page
+                    </a>
+                </li>
+                <li>
+                    <a href="javascrip:void();">
+                        Product Page
+                    </a>
+                </li>
+            </ul>
+            <div class="row col-md-2 ss-sidenav-sticky" data-spy="affix">
+                <div class="btn-group">
+                <button type="button" class="ss-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Jump To Page <span class="caret"></span>
+                </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Introduction</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Buttons/Links</a></li>
+                        <li><a href="#">Forms</a></li>
+                        <li><a href="#">List Item</a></li>
+                    </ul>
+                </div>
+            </div><!-- /.ss-sidenav-sticky -->
+        </div><!-- /#left-side -->
+        <div class="col-sm-12 col-md-9">
+
+            <div class="row ss-section">
+                <div class="col-sm-12">
+                    <h1 class="tan ss-color-block-background ss-margin-vertical-xs ss-padding-vertical-xl">Grid/Positioning</h1>
+                    <ul class="ss-nav-horizontal">
+                        <li><h1>Jump to:</h1></li>
+                        <li><a href="#grid">The Grid</a></li
+                        ><li><a href="#spacing">Spacing</a></li
+                        ><li><a href="#alignment">Alignment</a></li>
+                    </ul>
+                    <hr />
+
+                    <h2 id="grid" class="tan ss-color-block">The Grid</h2>
+
+                    <p>
+                        SS follows the default Bootstrap grid of
+                        <code>.row</code> and
+                        <code>.col-<span>size</span>-<span>columns</span></code>
+                        and <code>.col-<span>size</span>-offset-<span>columns</span></code>. Where no set of columns within a row exceeds 12.
+                    </p>
+                    <p>
+                        Nested rows + columns are sized based on parent container size.
+                    </p>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <label>12-column within 12-column</label>
+                                    <div class="row ss-sample-row">
+                                        <div class="col-sm-12 ss-sample-col">
+                                            <span><code>.col-sm-12</code></span>
+                                            <br />
+                                            <div class="row ss-sample-row">
+                                                <div class="col-sm-12 ss-sample-col">
+                                                    <span><code>.col-sm-12</code></span>
+                                                </div>
+                                            </div><!-- /.row -->
+                                        </div>
+                                    </div><!-- /.row -->
+                                </div>
+                            </div><!-- /.row -->
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <label>Two 6-column within 12-column</label>
+                                    <div class="row ss-sample-row">
+                                        <div class="col-sm-12 ss-sample-col">
+                                            <span><code>.col-sm-12</code></span>
+                                            <div class="row ss-sample-row">
+                                                <div class="col-sm-6 ss-sample-col">
+                                                    <span><code>.col-sm-6</code></span>
+                                                </div>
+                                                <div class="col-sm-6 ss-sample-col">
+                                                    <span><code>.col-sm-6</code></span>
+                                                </div>
+                                            </div><!-- /.row -->
+                                        </div>
+                                    </div><!-- /.row -->
+                                </div>
+                            </div><!-- /.row -->
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <label>Two 6-column within 6-column within 12-column</label>
+                                    <div class="row ss-sample-row">
+                                        <div class="col-sm-12 ss-sample-col">
+                                            <span><code>.col-sm-12</code></span>
+                                            <br />
+                                            <div class="row ss-sample-row">
+                                                <div class="col-sm-6 col-sm-offset-3 ss-sample-col">
+                                                    <span><code>.col-sm-6 .col-sm-offset-3</code></span>
+                                                    <div class="row ss-sample-row">
+                                                        <div class="col-sm-6 ss-sample-col">
+                                                            <span><code>.col-sm-6</code></span>
+                                                        </div>
+                                                        <div class="col-sm-6 ss-sample-col">
+                                                            <span><code>.col-sm-6</code></span>
+                                                        </div>
+                                                    </div><!-- /.row -->
+                                                </div>
+
+                                            </div><!-- /.row -->
+                                        </div>
+                                    </div><!-- /.row -->
+                                </div>
+                            </div><!-- /.row -->
+                        </li>
+                    </ul>
+
+                    <div class="table-responsive"> <table class="table table-bordered table-striped"> <thead> <tr> <th></th> <th> Extra small devices <small>Phones (&lt;768px)</small> </th> <th> Small devices <small>Tablets (≥768px)</small> </th> <th> Medium devices <small>Desktops (≥992px)</small> </th> <th> Large devices <small>Desktops (≥1200px)</small> </th> </tr> </thead> <tbody> <tr> <th class="text-nowrap" scope="row">Grid behavior</th> <td>Horizontal at all times</td> <td colspan="3">Collapsed to start, horizontal above breakpoints</td> </tr> <tr> <th class="text-nowrap" scope="row">Container width</th> <td>None (auto)</td> <td>750px</td> <td>970px</td> <td>1170px</td> </tr> <tr> <th class="text-nowrap" scope="row">Class prefix</th> <td><code>.col-xs-</code></td> <td><code>.col-sm-</code></td> <td><code>.col-md-</code></td> <td><code>.col-lg-</code></td> </tr> <tr> <th class="text-nowrap" scope="row"># of columns</th> <td colspan="4">12</td> </tr> <tr> <th class="text-nowrap" scope="row">Column width</th> <td class="text-muted">Auto</td> <td>~62px</td> <td>~81px</td> <td>~97px</td> </tr> <tr> <th class="text-nowrap" scope="row">Gutter width</th> <td colspan="4">30px (15px on each side of a column)</td> </tr> <tr> <th class="text-nowrap" scope="row">Nestable</th> <td colspan="4">Yes</td> </tr> <tr> <th class="text-nowrap" scope="row">Offsets</th> <td colspan="4">Yes</td> </tr> <tr> <th class="text-nowrap" scope="row">Column ordering</th> <td colspan="4">Yes</td> </tr> </tbody> </table> </div>
+
+                    <p>
+                        Columns with no <code>sm</code> delared collapse to 12-columns on mobile by default.
+                    </p>
+
+                    <div class="ss-sample-row">
+                        <div class="col-md-1 ss-sample-col"><span><code>.col-md-1</code></span></div>
+                        <div class="col-md-1 ss-sample-col"><span><code>.col-md-1</code></span></div>
+                        <div class="col-md-1 ss-sample-col"><span><code>.col-md-1</code></span></div>
+                        <div class="col-md-1 ss-sample-col"><span><code>.col-md-1</code></span></div>
+                        <div class="col-md-1 ss-sample-col"><span><code>.col-md-1</code></span></div>
+                        <div class="col-md-1 ss-sample-col"><span><code>.col-md-1</code></span></div>
+                        <div class="col-md-1 ss-sample-col"><span><code>.col-md-1</code></span></div>
+                        <div class="col-md-1 ss-sample-col"><span><code>.col-md-1</code></span></div>
+                        <div class="col-md-1 ss-sample-col"><span><code>.col-md-1</code></span></div>
+                        <div class="col-md-1 ss-sample-col"><span><code>.col-md-1</code></span></div>
+                        <div class="col-md-1 ss-sample-col"><span><code>.col-md-1</code></span></div>
+                        <div class="col-md-1 ss-sample-col"><span><code>.col-md-1</code></span></div>
+                    </div>
+                    <div class="ss-sample-row">
+                        <div class="col-md-8 ss-sample-col"><span><code>.col-md-8</code></span></div>
+                        <div class="col-md-4 ss-sample-col"><span><code>.col-md-4</code></span></div>
+                    </div>
+                    <div class="ss-sample-row">
+                        <div class="col-md-4 ss-sample-col"><span><code>.col-md-4</code></span></div>
+                        <div class="col-md-4 ss-sample-col"><span><code>.col-md-4</code></span></div>
+                        <div class="col-md-4 ss-sample-col"><span><code>.col-md-4</code></span></div>
+                    </div>
+                    <div class="ss-sample-row">
+                        <div class="col-md-6 ss-sample-col"><span><code>.col-md-6</code></span></div>
+                        <div class="col-md-6 ss-sample-col"><span><code>.col-md-6</code></span></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="ss-xtras col-sm-12 ss-margin-vertical-xxl ss-margin-vertical-none-bottom">
+                            <button class="ss-btn" type="button" data-toggle="collapse" data-target="#grid-html" aria-expanded="true" aria-controls="grid-html">
+                                View HTML
+                            </button>
+                            <button class="ss-btn" type="button" data-toggle="collapse" data-target="#grid-notes" aria-expanded="false" aria-controls="grid-notes">
+                                Notes
+                            </button>
+                            <div class="collapse in" id="grid-html">
+                                <pre>
+<code><em class="tag">&lt;div</em> <em class="attr">class="</em><em class="class">row</em><em class="attr">"</em><em class="tag">></em>
+    <em class="tag">&lt;div</em> <em class="attr">class="</em><em class="class">col-sm-12 col-md-6 col-lg-4</em><em class="attr">"</em><em class="tag">></em>
+        Content
+        <em class="tag">&lt;div</em> <em class="attr">class="</em><em class="class">row</em><em class="attr">"</em><em class="tag">></em>
+            <em class="tag">&lt;div</em> <em class="attr">class="</em><em class="class">col-sm-6</em><em class="attr">"</em><em class="tag">></em>
+                Nested Content
+            <em class="tag">&lt;/div&gt;</em>
+        <em class="tag">&lt;/div&gt;</em>
+        <em class="tag">&lt;div</em> <em class="attr">class="</em><em class="class">row</em><em class="attr">"</em><em class="tag">></em>
+            <em class="tag">&lt;div</em> <em class="attr">class="</em><em class="class">col-sm-6</em><em class="attr">"</em><em class="tag">></em>
+                Nested Content
+            <em class="tag">&lt;/div&gt;</em>
+        <em class="tag">&lt;/div&gt;</em>
+    <em class="tag">&lt;/div&gt;</em>
+<em class="tag">&lt;/div&gt;</em></code></pre>
+                            </div><!-- /.collapse#grid-html -->
+                            <div class="collapse" id="grid-notes">
+                                <pre><code>asd</code></pre>
+                            </div><!-- /#grid-notes -->
+                        </div><!-- /.ss-xtras -->
+                    </div><!-- /.row -->
+
+                </div><!-- /.col-sm-12 -->
+            </div><!-- /.row.ss-section -->
+
+            <div class="row ss-section">
+                <div class="col-sm-12">
+                    <hr />
+                    <h2 id="spacing" class="tan ss-color-block">Spacing</h2>
+                    <p>
+                        Margin and Padding adjustments can be done using classes following this structure:<br />
+                        <code>.ss-type-<span>size</span>-<span>direction</span></code>
+                    </p>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Types</th>
+                            <th>Sizes</th>
+                            <th>Directions</th>
+                        </tr>
+                        <tr>
+                            <td>Margin<br /><code>mar</code></td>
+                            <td>Xtra Small<br /><code>xs</code></td>
+                            <td><code>left</code></td>
+                        </tr>
+                        <tr>
+                            <td>Padding<br /><code>pad</code></td>
+                            <td>Small<br /><code>sm</code></td>
+                            <td><code>right</code></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Medium<br /><code>md</code></td>
+                            <td><code>top</code></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Large<br /><code>lg</code></td>
+                            <td><code>bottom</code></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Xtra Large<br /><code>xl</code></td>
+                            <td>Vertical<br /><code>v</code></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Xtra Xtra Large<br /><code>xxl</code></td>
+                            <td>Horizontal<br /><code>h</code></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>None (Zero)<br /><code>none</code></td>
+                            <td>All Sides<br /><code>all</code></td>
+                        </tr>
+                    </table>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3>Some Examples:</h3>
+                            <h5 class="ss-inline-block ss-mar-sm-right">Key:</h5>
+                            <div class="ss-sample-container ss-pad-sm">margin</div>
+                            <div class="ss-sample-container"><div class="ss-sample-box red ss-pad-sm">padding</div></div>
+                            <div class="ss-sample-container"><div class="ss-sample-box red"><span class="ss-pad-sm">content</span></div></div>
+                            <br /><br />
+                            <div class="ss-sample-container">
+                                <div class="ss-sample-box red ss-mar-md-all">
+                                    <span>.sm-mar-md-all</span>
+                                </div>
+                            </div><!-- /.ss-sample-container -->
+                            <div class="ss-sample-container">
+                                <div class="ss-sample-box red ss-pad-lg-left ss-pad-lg-bottom">
+                                    <span>.ss-pad-lg-left<br />.ss-pad-lg-bottom</span>
+                                </div>
+                            </div><!-- /.ss-sample-container -->
+                            <div class="ss-sample-container">
+                                <div class="ss-sample-box red ss-pad-xl-bottom ss-mar-xxl-right">
+                                    <span>.ss-pad-xl-bottom<br />.ss-mar-xxl-right</span>
+                                </div>
+                            </div><!-- /.ss-sample-container -->
+                            <div class="ss-sample-container">
+                                <div class="ss-sample-box red ss-pad-md-h ss-mar-xs-v">
+                                    <span>.ss-pad-md-h<br />.ss-mar-xs-v</span>
+                                </div>
+                            </div><!-- /.ss-sample-container -->
+                            <div class="ss-sample-container">
+                                <div class="ss-sample-box red ss-pad-none ss-mar-none">
+                                    <span>.ss-pad-none<br />.ss-mar-none</span>
+                                </div>
+                            </div><!-- /.ss-sample-container -->
+                        </div><!-- /.col-sm-12 -->
+                    </div><!-- /.row -->
+
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                        </div><!-- /.col-sm-12 -->
+                    </div><!-- /.row -->
+
+                </div><!-- /.col-sm-12 -->
+                <div class="ss-xtras col-sm-12 ss-margin-vertical-xxl ss-margin-vertical-none-bottom">
+                    <button class="ss-btn" type="button" data-toggle="collapse" data-target="#spacing-html" aria-expanded="true" aria-controls="spacing-html">
+                        View HTML
+                    </button>
+                    <button class="ss-btn" type="button" data-toggle="collapse" data-target="#spacing-notes" aria-expanded="false" aria-controls="spacing-notes">
+                        Notes
+                    </button>
+                    <div class="collapse in" id="spacing-html">
+                        <pre>
+<code>
+<em class="tag">&lt;div</em> <em class="attr">class="</em><em class="class">ss-<i>type</i>-<i>size</i>-<i>direction</i></em><em class="attr">"</em><em class="tag">&gt;</em><em class="tag">&lt;/div&gt;</em>
+</code></pre>
+                    </div><!-- /.collapse#spacing-html -->
+                    <div class="collapse" id="spacing-notes">
+                        <pre><code><p>
+                            Layer spacing classes as you please but conflicting combinations may have unfavorable results depending on their order within the stylesheet. To get, for example, Xtra Large padding on all sides except the left <em class="attr">class="</em><em class="class">ss-pad-xl-all ss-pad-none-left</em><em class="attr">"</em> would work just fine.
+                        </p><p>
+                            <em class="class">-xl-all</em> and <em class="class">-xl</em> achieve the same result. This applies to all <em class="attr">sizes</em> with no <em class="attr">direction</em> added. See table below for example.
+                        </p>
+                        <h4>Vertical/Horizontal</h4><table class="table table-bordered text-center ss-margin-matrix">
+                            <tr >
+                                <td></td>
+                                <td><b>0</b></td>
+                                <td><b>4</b></td>
+                                <td><b>8</b></td>
+                                <td><b>16</b></td>
+                                <td><b>32</b></td>
+                                <td><b>48</b></td>
+                                <td><b>80</b></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>0</b></td>
+                                <td>-none</td>
+                                <td>-xs-v</td>
+                                <td>-sm-v</td>
+                                <td>-md-v</td>
+                                <td>-lg-v</td>
+                                <td>-xl-v</td>
+                                <td>-xxl-v</td>
+                                <td><b>0</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>4</b></td>
+                                <td>-xs-h</td>
+                                <td>-xs</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><b>4</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>8</b></td>
+                                <td>-sm-h</td>
+                                <td></td>
+                                <td>-sm</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><b>8</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>16</b></td>
+                                <td>-md-h</td>
+                                <td></td>
+                                <td></td>
+                                <td>-md</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><b>16</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>32</b></td>
+                                <td>-lg-h</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>-lg</td>
+                                <td></td>
+                                <td></td>
+                                <td><b>32</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>48</b></td>
+                                <td>-xl-h</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>-xl</td>
+                                <td></td>
+                                <td><b>48</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>80</b></td>
+                                <td>-xxl-h</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>-xxl</td>
+                                <td><b>80</b></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><b>0</b></td>
+                                <td><b>4</b></td>
+                                <td><b>8</b></td>
+                                <td><b>16</b></td>
+                                <td><b>32</b></td>
+                                <td><b>48</b></td>
+                                <td><b>80</b></td>
+                                <td></td>
+                            </tr>
+                        </table></code></pre>
+                    </div><!-- /#spacing-notes -->
+                </div><!-- /.ss-xtras -->
+            </div><!-- /.ss-section -->
+
+            <div class="row ss-section">
+                <div class="col-sm-12">
+                    <hr />
+
+                    <h2 id="alignment" class="red ss-color-block">Alignment</h2>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="ss-sample-container ss-pad-md-v" style="width:100%">
+                                        <div class="pull-left">
+                                            Pull Left
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="ss-sample-container ss-pad-md-v" style="width:100%">
+                                        <div class="pull-right">
+                                            Pull Right
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="ss-sample-container ss-pad-md-v" style="width:100%">
+                                        <div class="text-center">
+                                            Center Text
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="ss-sample-container" style="width:100%">
+                                        <div class="ss-sample-box red center-block ss-pad-md-all" style="width: 200px;">
+                                            Center Block
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <pre>
+<code><em class="tag">&lt;div</em> <em class="attr">class="</em><em class="class">pull-left</em><em class="attr">"</em><em class="tag">&gt;</em>
+    Pull Left
+<em class="tag">&lt;/div&gt;</em>
+
+<em class="tag">&lt;div</em> <em class="attr">class="</em><em class="class">pull-right</em><em class="attr">"</em><em class="tag">&gt;</em>
+    Pull Right
+<em class="tag">&lt;/div&gt;</em>
+
+<em class="tag">&lt;div</em> <em class="attr">class="</em><em class="class">text-center</em><em class="attr">"</em><em class="tag">&gt;</em>
+    Center Text
+<em class="tag">&lt;/div&gt;</em>
+
+<em class="tag">&lt;div</em> <em class="attr">class="</em><em class="attr">...</em><em class="attr">"</em><em class="tag">&gt;</em>
+    <em class="tag">&lt;div</em> <em class="attr">class="</em><em class="class">center-block</em><em class="attr">"</em><em class="tag">&gt;</em>
+        Center Block
+    <em class="tag">&lt;/div&gt;</em>
+<em class="tag">&lt;/div&gt;</em>
+                            </code></pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- /.ss-section -->
+
+        </div>
+    </div><!-- /.row -->
+</div><!-- /.container -->
+
+<div class="footer">
+    <hr class="white" />
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/ss-v6.js"></script>
+
+</body>
+</html>
